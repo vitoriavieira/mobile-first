@@ -1,0 +1,286 @@
+        *{          
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root{
+            --marrom: #5C3100;
+            --marrom-claro: #8A4900;
+            --marrom-escuro:#381D00;
+            
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--marrom-escuro);
+            color: beige;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        
+        nav {
+            background-color: var(--marrom);
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav li {
+            margin: 0 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--marrom-escuro);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+        }
+        
+        h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        
+        .listas {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+        
+        .lista {
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        
+        .lista-num {
+            background-color: #8B4513;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .materials {
+            background-color: #f9f3e9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+        
+        .materials ul {
+            margin-left: 2rem;
+        }
+        
+        .materials li {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        button {
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #A0522D;
+        }
+        
+        @media (min-width: 700px) {
+      /* Menu horizontal */
+      nav {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      nav a {
+        width: auto;
+        border-bottom: none;
+      }
+
+      /* Seções lado a lado com flex-wrap */
+      main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      section {
+        flex: 1 1 45%; /* Ocupa 45% da linha */
+      }
+
+      section.contato {
+        flex: 1 1 100%; /* Ocupa linha inteira */
+      }
+    }
+
+    /* Ajustes para telas grandes (ex: desktop) */
+    @media (min-width: 1000px) {
+      main {
+        gap: 30px;
+        justify-content: center;
+      }
+
+      section {
+        max-width: 100%;
+      }
+
+      section.contato {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 600px) {
+    .itens {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .box {
+        flex: 1 1 200px;
+    }
+    
+    .principal, .secundario {
+        padding: 30px;
+    }
+}
+
+/* MEDIA QUERY PARA DESKTOP (900px) */
+@media (min-width: 900px) {
+    body {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .conteudo {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .principal {
+        flex: 2;
+    }
+    
+    .secundario {
+        flex: 1;
+    }
+    
+    .box {
+        padding: 40px;
+    }
+}
